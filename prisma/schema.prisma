@@ -1,0 +1,33 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model Mayonaisse {
+  id            Int @id @default(autoincrement())
+  name          String
+  ingredient    String
+  portion       String
+  combination   Combination[]
+}
+
+model Dish {
+  id            Int @id @default(autoincrement())
+  name          String
+  combination   Combination[]
+}
+
+model Combination {
+  id            Int @id @default(autoincrement())
+  mayonaisse    Mayonaisse @relation(fields:[mayonaisseId], references:[id])
+  mayonaisseId  Int
+  dish          Dish @relation(fields:[dishId], references:[id])
+  dishId        Int
+}
