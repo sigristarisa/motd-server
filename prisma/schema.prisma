@@ -10,11 +10,12 @@ datasource db {
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
-model Mayonaisse {
+model Mayonnaise {
   id            Int @id @default(autoincrement())
   name          String
   ingredient    String
   portion       String
+  image         String
   combination   Combination[]
 }
 
@@ -26,8 +27,8 @@ model Dish {
 
 model Combination {
   id            Int @id @default(autoincrement())
-  mayonaisse    Mayonaisse @relation(fields:[mayonaisseId], references:[id])
-  mayonaisseId  Int
+  mayonnaise    Mayonnaise @relation(fields:[mayonnaiseId], references:[id])
+  mayonnaiseId  Int
   dish          Dish @relation(fields:[dishId], references:[id])
   dishId        Int
 }
