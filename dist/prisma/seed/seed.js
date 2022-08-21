@@ -13,10 +13,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const rawMayonnaise_1 = require("./rawMayonnaise");
+const rawDishes_1 = require("./rawDishes");
 const client_1 = __importDefault(require("@prisma/client"));
 const dbClient = new client_1.default.PrismaClient();
 const seed = () => __awaiter(void 0, void 0, void 0, function* () {
     yield createMayonaisseData();
+    yield createDishData();
     process.exit(0);
 });
 const createMayonaisseData = () => __awaiter(void 0, void 0, void 0, function* () {
@@ -28,6 +30,16 @@ const createMayonaisseData = () => __awaiter(void 0, void 0, void 0, function* (
         mayonnaiseArr.push(createdMayonnaise);
     }
     return mayonnaiseArr;
+});
+const createDishData = () => __awaiter(void 0, void 0, void 0, function* () {
+    const dishArr = [];
+    for (const dish of rawDishes_1.rawDishes) {
+        const createdDish = yield dbClient.dish.create({
+            data: dish,
+        });
+        dishArr.push(dish);
+    }
+    return dishArr;
 });
 seed()
     .catch((e) => __awaiter(void 0, void 0, void 0, function* () {

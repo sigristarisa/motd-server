@@ -1,4 +1,5 @@
 import { rawMayonnaise } from "./rawMayonnaise";
+import { rawDishes } from "./rawDishes";
 import prisma from "@prisma/client";
 const dbClient = new prisma.PrismaClient();
 
@@ -9,8 +10,13 @@ type Mayonnaise = {
   image: string;
 };
 
+type Dish = {
+  name: string;
+};
+
 const seed = async (): Promise<void> => {
   await createMayonaisseData();
+  await createDishData();
   process.exit(0);
 };
 
@@ -25,6 +31,18 @@ const createMayonaisseData = async (): Promise<Mayonnaise[]> => {
   }
 
   return mayonnaiseArr;
+};
+
+const createDishData = async (): Promise<Dish[]> => {
+  const dishArr = [];
+
+  for (const dish of rawDishes) {
+    const createdDish = await dbClient.dish.create({
+      data: dish,
+    });
+    dishArr.push(dish);
+  }
+  return dishArr;
 };
 
 seed()
