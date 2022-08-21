@@ -5,7 +5,7 @@ type Mayonnaise = {
   image: string;
 };
 
-const rawMayonaisse: Mayonnaise[] = [
+export const rawMayonnaise: Mayonnaise[] = [
   {
     name: "pumpkin",
     ingredient: "mashed pumpkin",

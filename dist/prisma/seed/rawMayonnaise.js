@@ -1,5 +1,7 @@
 "use strict";
-const rawMayonaisse = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.rawMayonnaise = void 0;
+exports.rawMayonnaise = [
     {
         name: "pumpkin",
         ingredient: "mashed pumpkin",
@@ -601,3 +603,4 @@ const rawMayonaisse = [
         image: "/assets/mayo-image/image_mayonnaise100",
     },
 ];
+//# sourceMappingURL=rawMayonnaise.js.map

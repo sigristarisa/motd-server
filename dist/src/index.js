@@ -10,3 +10,4 @@ const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use((0, morgan_1.default)("dev"));
 app.listen(4000);
+//# sourceMappingURL=index.js.map
