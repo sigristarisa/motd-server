@@ -1,5 +1,6 @@
 import { rawMayonnaise } from "./rawMayonnaise";
 import { rawDishes } from "./rawDishes";
+import { rawCombinations } from "./rawCombinations";
 import prisma from "@prisma/client";
 const dbClient = new prisma.PrismaClient();
 
@@ -14,9 +15,15 @@ type Dish = {
   name: string;
 };
 
+type Combination = {
+  mayonnaiseId: number;
+  dishId: number;
+};
+
 const seed = async (): Promise<void> => {
   await createMayonaisseData();
   await createDishData();
+  await createCombinationData();
   process.exit(0);
 };
 
@@ -43,6 +50,25 @@ const createDishData = async (): Promise<Dish[]> => {
     dishArr.push(dish);
   }
   return dishArr;
+};
+
+const createCombinationData = async (): Promise<Combination[]> => {
+  const combinationArr = [];
+
+  for (const combination of rawCombinations) {
+    const createdCombination = await dbClient.combination.create({
+      data: {
+        mayonnaise: {
+          connect: { id: combination.mayonnaiseId },
+        },
+        dish: {
+          connect: { id: combination.dishId },
+        },
+      },
+    });
+    combinationArr.push(createdCombination);
+  }
+  return combinationArr;
 };
 
 seed()
