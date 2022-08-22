@@ -55,7 +55,11 @@ export class Mayonnaise {
       await dbClient.mayonnaise.findFirst({
         where: { id },
         include: {
-          combination: true,
+          combination: {
+            include: {
+              dish: true,
+            },
+          },
         },
       });
 

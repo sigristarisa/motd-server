@@ -38,7 +38,11 @@ class Mayonnaise {
             const foundMayonnaise = yield dbClient.mayonnaise.findFirst({
                 where: { id },
                 include: {
-                    combination: true,
+                    combination: {
+                        include: {
+                            dish: true,
+                        },
+                    },
                 },
             });
             if (foundMayonnaise) {
