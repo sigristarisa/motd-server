@@ -13,6 +13,7 @@ type Mayonnaise = {
 
 type Dish = {
   name: string;
+  image: string;
 };
 
 type Combination = {

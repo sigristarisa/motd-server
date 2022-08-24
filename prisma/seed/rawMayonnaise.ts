@@ -265,7 +265,7 @@ export const rawMayonnaise: Mayonnaise[] = [
     image: "/assets/mayo-image/image_mayonnaise43",
   },
   {
-    name: "",
+    name: "pesto",
     ingredient: "pesto sauce",
     portion: "0.5 tbsp.",
     image: "/assets/mayo-image/image_mayonnaise44",
@@ -481,14 +481,14 @@ export const rawMayonnaise: Mayonnaise[] = [
     image: "/assets/mayo-image/image_mayonnaise79",
   },
   {
-    name: "code roe",
-    ingredient: "code roe",
+    name: "cod roe",
+    ingredient: "cod roe",
     portion: "1 tbsp.",
     image: "/assets/mayo-image/image_mayonnaise80",
   },
   {
-    name: "spiced code roe",
-    ingredient: "spiced code roe",
+    name: "spiced cod roe",
+    ingredient: "spiced cod roe",
     portion: "1 tbsp.",
     image: "/assets/mayo-image/image_mayonnaise81",
   },
