@@ -5,10 +5,11 @@
 Mayonnaise took over Japan's nation back in the late 90's. Even a term <i>"Mayoler"</i> was born to describe a growing obsession with this condiment by Japanese, particularly among the younger generation.<br>
 Fastfoward to 2022 – <i>"Mayoler"</i> is now a commonly used expression, and from my observation, the popularity does not remain within Japan.
 
-To showcase the potential of mayonnaise, MOTD - Mayonnaise Of The Day - was born by the Mayo-Lover, for the Mayo-Lover, of the Mayo-Lover.
+To showcase the potential of mayonnaise, MOTD - Mayonnaise Of The Day - was created by the Mayo-Lover, for the Mayo-Lover, of the Mayo-Lover.
 
 
 ### Demo
+![motd demo gif](https://github.com/sigristarisa/motd-server/blob/main/assets/motd-demo.gif?raw=true)
 
 
 
