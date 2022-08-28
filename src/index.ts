@@ -1,10 +1,10 @@
 import express from "express";
-// import cors from "cors";
+import cors from "cors";
 import morgan from "morgan";
 import mayonnaiseRouter from "./routes/mayonnaise";
 
 const app = express();
-// app.use(cors());
+app.use(cors());
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("assets"));
