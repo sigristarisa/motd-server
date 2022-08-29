@@ -6,7 +6,6 @@ type MayoType = {
   name: string;
   ingredient: string;
   portion: string;
-  image: string;
   combination: object[];
 };
 
@@ -15,7 +14,6 @@ export class Mayonnaise {
   name: string;
   ingredient: string;
   portion: string;
-  image: string;
   combination: object[];
 
   constructor(
@@ -23,20 +21,18 @@ export class Mayonnaise {
     name: string,
     ingredient: string,
     portion: string,
-    image: string,
     combination: object[]
   ) {
     this.id = id;
     this.name = name;
     this.ingredient = ingredient;
     this.portion = portion;
-    this.image = image;
     this.combination = combination;
   }
 
   static async fromClient(json: MayoType) {
     const { id } = json;
-    return new Mayonnaise(+id, "", "", "", "", []);
+    return new Mayonnaise(+id, "", "", "", []);
   }
 
   static fromDb(mayonnaise: MayoType) {
@@ -45,7 +41,6 @@ export class Mayonnaise {
       mayonnaise.name,
       mayonnaise.ingredient,
       mayonnaise.portion,
-      mayonnaise.image,
       mayonnaise.combination
     );
   }

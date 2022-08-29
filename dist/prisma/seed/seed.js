@@ -39,7 +39,7 @@ const createDishData = () => __awaiter(void 0, void 0, void 0, function* () {
         const createdDish = yield dbClient.dish.create({
             data: dish,
         });
-        dishArr.push(dish);
+        dishArr.push(createdDish);
     }
     return dishArr;
 });

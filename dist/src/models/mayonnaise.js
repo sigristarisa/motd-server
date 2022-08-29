@@ -16,22 +16,21 @@ exports.Mayonnaise = void 0;
 const client_1 = __importDefault(require("@prisma/client"));
 const dbClient = new client_1.default.PrismaClient();
 class Mayonnaise {
-    constructor(id, name, ingredient, portion, image, combination) {
+    constructor(id, name, ingredient, portion, combination) {
         this.id = id;
         this.name = name;
         this.ingredient = ingredient;
         this.portion = portion;
-        this.image = image;
         this.combination = combination;
     }
     static fromClient(json) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = json;
-            return new Mayonnaise(+id, "", "", "", "", []);
+            return new Mayonnaise(+id, "", "", "", []);
         });
     }
     static fromDb(mayonnaise) {
-        return new Mayonnaise(mayonnaise.id, mayonnaise.name, mayonnaise.ingredient, mayonnaise.portion, mayonnaise.image, mayonnaise.combination);
+        return new Mayonnaise(mayonnaise.id, mayonnaise.name, mayonnaise.ingredient, mayonnaise.portion, mayonnaise.combination);
     }
     static findById(id) {
         return __awaiter(this, void 0, void 0, function* () {

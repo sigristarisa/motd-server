@@ -8,7 +8,6 @@ type Mayonnaise = {
   name: string;
   ingredient: string;
   portion: string;
-  image: string;
 };
 
 type Dish = {
@@ -48,7 +47,7 @@ const createDishData = async (): Promise<Dish[]> => {
     const createdDish = await dbClient.dish.create({
       data: dish,
     });
-    dishArr.push(dish);
+    dishArr.push(createdDish);
   }
   return dishArr;
 };

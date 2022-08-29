@@ -8,7 +8,6 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("assets"));
-app.use(express.static("mayo-image"));
 app.use(express.static("dish-image"));
 
 app.use("/assets", express.static("assets"));

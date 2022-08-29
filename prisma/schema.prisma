@@ -15,7 +15,6 @@ model Mayonnaise {
   name          String
   ingredient    String
   portion       String
-  image         String
   combination   Combination[]
 }
 

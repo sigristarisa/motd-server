@@ -12,7 +12,6 @@ app.use((0, cors_1.default)());
 app.use((0, morgan_1.default)("dev"));
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use(express_1.default.static("assets"));
-app.use(express_1.default.static("mayo-image"));
 app.use(express_1.default.static("dish-image"));
 app.use("/assets", express_1.default.static("assets"));
 app.use("/mayonnaise", mayonnaise_1.default);
