@@ -7,11 +7,8 @@ export const findMayonnaiseById: RequestHandler<{ mayoId: string }> = async (
   res
 ) => {
   const mayoId = +req.params.mayoId;
-  console.log("mayoId:", mayoId);
-
   try {
     const foundMayonnaise = await Mayonnaise.findById(mayoId);
-    console.log("hi");
 
     if (!foundMayonnaise) {
       return sendDataResponse(res, 404, { id: "mayonnaise not found" });

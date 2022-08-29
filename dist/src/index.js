@@ -14,9 +14,6 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use(express_1.default.static("assets"));
 app.use(express_1.default.static("mayo-image"));
 app.use(express_1.default.static("dish-image"));
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "http://localhost:4000");
-});
 app.use("/assets", express_1.default.static("assets"));
 app.use("/mayonnaise", mayonnaise_1.default);
 const port = process.env.PORT || 4000;

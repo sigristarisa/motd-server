@@ -14,10 +14,8 @@ const mayonnaise_1 = require("../models/mayonnaise");
 const responses_1 = require("../helpers/responses");
 const findMayonnaiseById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const mayoId = +req.params.mayoId;
-    console.log("mayoId:", mayoId);
     try {
         const foundMayonnaise = yield mayonnaise_1.Mayonnaise.findById(mayoId);
-        console.log("hi");
         if (!foundMayonnaise) {
             return (0, responses_1.sendDataResponse)(res, 404, { id: "mayonnaise not found" });
         }

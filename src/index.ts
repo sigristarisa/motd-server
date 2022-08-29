@@ -10,9 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("assets"));
 app.use(express.static("mayo-image"));
 app.use(express.static("dish-image"));
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:4000");
-});
 
 app.use("/assets", express.static("assets"));
 app.use("/mayonnaise", mayonnaiseRouter);
