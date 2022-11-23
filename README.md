@@ -21,10 +21,11 @@ To showcase the potential of mayonnaise, MOTD - Mayonnaise Of The Day - was crea
 
 ### What Language is Used?
 **Frontend**
-- React with Typescript
+- React with Typescript / Next.js with Typescript
 - CSS
 
-=> *frontend repository is found [here](https://github.com/sigristarisa/motd-client)*
+=> *frontend repository (React) is found [here](https://github.com/sigristarisa/motd-client)*
+=> *frontend repository (Next.js) is found [here](https://github.com/sigristarisa/motd-nextjs)*
 
 
 **Backend** 
