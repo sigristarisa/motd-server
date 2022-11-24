@@ -4,11 +4,7 @@ import morgan from "morgan";
 import mayonnaiseRouter from "./routes/mayonnaise";
 
 const app = express();
-app.use(
-  cors({
-    origin: process.env.CLIENT_URL,
-  })
-);
+app.use(cors());
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("assets"));
