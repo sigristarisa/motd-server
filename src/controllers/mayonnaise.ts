@@ -7,7 +7,6 @@ export const findMayonnaiseById: RequestHandler<{ mayoId: string }> = async (
   res
 ) => {
   const mayoId = +req.params.mayoId;
-  res.setHeader("Access-Control-Allow-Origin", "*");
   try {
     const foundMayonnaise = await Mayonnaise.findById(mayoId);
 
