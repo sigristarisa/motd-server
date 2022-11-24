@@ -6,7 +6,7 @@ import mayonnaiseRouter from "./routes/mayonnaise";
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://motd-nextjs.vercel.app/"],
+    origin: "https://motd-nextjs.vercel.app/todays-mayonnaise",
   })
 );
 app.use(morgan("dev"));
