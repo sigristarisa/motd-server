@@ -21,13 +21,19 @@ To showcase the potential of mayonnaise, MOTD - Mayonnaise Of The Day - was crea
 
 ### What Language is Used?
 **Frontend**
-- React with Typescript
+- React with Typescript / Next.js with Typescript
 - CSS
 
-=> *frontend repository is found [here](https://github.com/sigristarisa/motd-client)*
+=> *frontend repository (React) is found [here](https://github.com/sigristarisa/motd-client)* </br>
+=> *frontend repository (Next.js) is found [here](https://github.com/sigristarisa/motd-nextjs)*
 
 
 **Backend** 
 - Express with Typescript
 - Prisma
 - PostgreSQL<br/>
+
+### Learning Take-Away
+- It was the first time creating a full-stack application using with Typescript – learned a lot of new syntax and error handlings.
+- I had several troubles (CORS block, configurations etc) while deploying the project on Heroku. It was a great learning opportunity to search trouble shootings, read documentations, understand what the causes are, and implement the solutions step by step.
+- The application's design was based on "my taste" at the beginning. After trying out to use the application on my own, I quickly realized that user interface shouldn't be about "how I like it" – it has to follow "how easily user could navigate themselves to use the application".
